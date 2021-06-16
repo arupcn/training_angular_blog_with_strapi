@@ -1,0 +1,16 @@
+
+<a class="right pointer login-btn" (click)="loginCall()">Login</a>
+<div class="blog">
+  <div class="container">
+    <ul *ngFor="let data of allBlogs;  let i = index">
+      
+      <a><h3>{{data.tittle}}</h3></a>
+      <!-- <p>Author: {{data.metadata.author}}</p> -->
+
+      <div class="blog-content">
+          <p [innerHTML]=data.description></p>  
+          <!-- <a class="btn btn-success" [routerLink]="['singlepost']" [queryParams]="{slug: data.slug}">Read more...</a> -->
+      </div>
+    </ul>
+  </div>
+</div>
